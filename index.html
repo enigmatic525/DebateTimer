@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Forum Debate Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="flash-overlay"></div>
+
+    <div class="container">
+        <!-- Top Prep Timers Container -->
+        <div class="prep-timers">
+
+            <!-- Aff Prep -->
+            <div class="prep-card aff">
+                <div class="prep-header">Aff Prep</div>
+                <div class="prep-time" id="aff-time">3:00</div>
+                <div class="controls">
+                    <button class="control-btn play-btn" id="aff-toggle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </button>
+                    <button class="control-btn reset-btn" id="aff-reset">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                            <polyline points="3 3 3 8 8 8"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Neg Prep -->
+            <div class="prep-card neg">
+                <div class="prep-header">Neg Prep</div>
+                <div class="prep-time" id="neg-time">3:00</div>
+                <div class="controls">
+                    <button class="control-btn play-btn" id="neg-toggle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </button>
+                    <button class="control-btn reset-btn" id="neg-reset">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                            <polyline points="3 3 3 8 8 8"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Timer Section -->
+        <div class="main-timer-section">
+            <div class="presets">
+                <button class="preset-btn" data-time="300">5 Min</button>
+                <button class="preset-btn" data-time="240">4 Min</button>
+                <button class="preset-btn" data-time="180">3 Min</button>
+                <button class="preset-btn" data-time="120">2 Min</button>
+            </div>
+
+            <div class="main-timer-wrapper">
+                <svg class="timer-ring-svg" viewBox="0 0 400 400">
+                    <g id="hash-marks"></g>
+                </svg>
+                <div class="main-display" id="main-time">4:00</div>
+            </div>
+
+            <div class="main-controls">
+                <button class="main-btn play-btn" id="main-toggle">Start</button>
+                <button class="main-btn reset-btn" id="main-reset">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
